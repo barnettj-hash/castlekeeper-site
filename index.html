@@ -43,6 +43,17 @@
           <a class="button" href="#gallery">See the kingdom</a>
         </div>
         <p class="hero-note">Desktop Windows and Mac builds are coming soon. Play the Unity WebGL prototype in your browser today.</p>
+        <div class="menu-audio" data-menu-audio>
+          <button type="button" class="menu-audio-toggle" aria-pressed="false">Sound off</button>
+          <label class="menu-audio-volume">
+            <span>Volume</span>
+            <input type="range" min="0" max="100" value="40" aria-label="Volume">
+          </label>
+          <audio loop preload="none">
+            <source src="assets/audio/menu-loop.ogg" type="audio/ogg">
+            <source src="assets/audio/menu-loop.mp3" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
     </section>
 

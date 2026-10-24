@@ -180,3 +180,145 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Presentation: frames, header, play stage, homepage sound */
+
+:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+.nav-actions a,
+.footer-links a {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.screenshot-card img {
+  aspect-ratio: 3 / 2;
+}
+
+.screenshot-card-cta {
+  flex-direction: column;
+}
+
+.gallery-play-card {
+  flex: 1;
+  min-height: 100%;
+}
+
+.site-footer {
+  gap: 14px 28px;
+}
+
+.webgl-frame-wrap {
+  --frame-height: min(calc(100svh - 188px), 960px);
+  --frame-height: min(calc(100dvh - 188px), 960px);
+  min-height: 480px;
+}
+
+.troubleshooting-note a {
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+
+.menu-audio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 18px;
+  padding: 8px 12px 8px 8px;
+  border: 1px solid rgba(240, 199, 102, 0.28);
+  border-radius: 999px;
+  background: rgba(8, 18, 37, 0.55);
+}
+
+.menu-audio-toggle {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid rgba(240, 199, 102, 0.38);
+  border-radius: 999px;
+  background: rgba(20, 35, 63, 0.9);
+  color: var(--ink);
+  cursor: pointer;
+  font: 800 0.92rem/1 ui-sans-serif, system-ui, sans-serif;
+}
+
+.menu-audio.is-on .menu-audio-toggle {
+  border-color: rgba(255, 245, 205, 0.62);
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  color: var(--ink-dark);
+}
+
+.menu-audio-volume {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font: 700 0.82rem/1 ui-sans-serif, system-ui, sans-serif;
+}
+
+.menu-audio-volume input {
+  width: 112px;
+  accent-color: var(--gold-bright);
+}
+
+.menu-audio.is-unavailable .menu-audio-toggle {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    gap: 10px;
+    min-height: 0;
+    padding: 10px 14px 12px;
+  }
+
+  .brand-link {
+    font-size: 1.05rem;
+  }
+
+  .brand-link img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-actions {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .nav-actions a {
+    min-height: 36px;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+  }
+
+  .play-actions,
+  .play-actions .button {
+    width: auto;
+  }
+
+  .play-shell-game {
+    padding-top: 12px;
+  }
+
+  .play-heading {
+    margin-bottom: 10px;
+  }
+
+  .webgl-frame-wrap {
+    --frame-height: min(70svh, 720px);
+    --frame-height: min(70dvh, 720px);
+    width: 100%;
+    height: var(--frame-height);
+    min-height: 420px;
+  }
+}
