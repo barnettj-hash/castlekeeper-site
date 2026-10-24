@@ -1,0 +1,182 @@
+/* Castle Keeper site polish — additive layer.
+   Upload beside styles.css and link after it, OR merge these rules into styles.css. */
+
+/* Premium hero: use art already on the server instead of the softer hero-kingdom.jpg alone */
+.hero-premium {
+  background-image:
+    linear-gradient(90deg, rgba(8, 18, 37, 0.92), rgba(8, 18, 37, 0.72) 42%, rgba(8, 18, 37, 0.28)),
+    url("images/castlekeeper-premium-menu.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-note {
+  margin: 18px 0 0;
+  max-width: 42ch;
+  color: var(--muted);
+  font: 600 0.95rem/1.5 ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Brand mark: rounder crest treatment for assets/logo.png */
+.brand-link img,
+.hero-logo {
+  object-fit: cover;
+  background: rgba(20, 35, 63, 0.6);
+}
+
+/* Gallery: 2×3 with premium PNGs */
+.gallery-grid-premium {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.screenshot-card-cta {
+  display: flex;
+  min-height: 100%;
+}
+
+.gallery-play-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 220px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(240, 199, 102, 0.22), transparent 40%),
+    linear-gradient(160deg, rgba(31, 52, 89, 0.95), rgba(8, 18, 37, 0.92));
+}
+
+.gallery-play-card strong {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.gallery-play-card span:last-child {
+  color: var(--muted);
+  font: 600 0.95rem/1.45 ui-sans-serif, system-ui, sans-serif;
+}
+
+.gallery-play-card:hover {
+  outline: 1px solid rgba(240, 199, 102, 0.45);
+}
+
+/* Disabled download CTAs (hide empty 388-byte zips) */
+.button-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+  background: rgba(20, 35, 63, 0.55);
+}
+
+.button-disabled:hover {
+  transform: none;
+  background: rgba(20, 35, 63, 0.55);
+}
+
+.download-soon-copy {
+  margin: 12px 0 0;
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Footer with Privacy / Support */
+.site-footer {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--ink);
+}
+
+/* Legal / support pages */
+.legal-shell .notes-card,
+.legal-card {
+  width: min(820px, 100%);
+  margin: 0 auto 28px;
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.legal-card h2 {
+  margin: 28px 0 12px;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+}
+
+.legal-card h2:first-child {
+  margin-top: 0;
+}
+
+.legal-card h3 {
+  margin: 20px 0 8px;
+  font-size: 1.1rem;
+}
+
+.legal-card ul {
+  margin: 0 0 12px;
+  padding-left: 1.2em;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.legal-card a,
+.text-link {
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+
+.legal-meta {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font: 600 0.92rem/1.45 ui-sans-serif, system-ui, sans-serif;
+}
+
+.legal-note {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--parchment-deep);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.support-grid {
+  margin-bottom: 28px;
+}
+
+.support-privacy-link {
+  margin-top: 18px;
+}
+
+@media (max-width: 920px) {
+  .gallery-grid-premium {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid-premium {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Castle Keeper</title>
+  <meta name="description" content="Play the Unity WebGL browser version of Castle Keeper by Josh Barnett.">
+  <link rel="canonical" href="https://castlekeeper.org/castle-keeper/play.html">
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/styles-polish.css">
+</head>
+<body class="play-page">
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="brand-link" href="../index.html" aria-label="Castle Keeper home">
+      <img src="../assets/logo.png" alt="" width="48" height="48">
+      <span>Castle Keeper</span>
+    </a>
+    <nav class="nav-actions" aria-label="Site links">
+      <a href="../index.html">Home</a>
+      <a href="play.html" aria-current="page">Play</a>
+      <a href="../downloads.html">Downloads</a>
+      <a href="../support.html">Support</a>
+      <a href="../privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="play-shell play-shell-game">
+    <section class="play-heading" aria-labelledby="play-title">
+      <div>
+        <p class="eyebrow">Browser build</p>
+        <h1 id="play-title">Play Castle Keeper</h1>
+        <p class="page-lede play-lede">Play the Unity WebGL kingdom simulator in your browser. Desktop-first · mouse, keyboard, fullscreen.</p>
+      </div>
+      <div class="button-row play-actions">
+        <a class="button" href="../index.html">Back to Site</a>
+        <button class="button button-primary" type="button" data-fullscreen-target="webgl-stage-frame">Fullscreen</button>
+      </div>
+    </section>
+
+    <section class="play-status-bar" aria-label="Browser build details">
+      <p>Desktop-first kingdom view • Mouse, keyboard, and fullscreen ready</p>
+      <p>If loading takes longer than expected, use the notes below to confirm your WebGL upload.</p>
+    </section>
+
+    <section class="webgl-stage" aria-label="Castle Keeper WebGL game">
+      <div class="webgl-frame-wrap" id="webgl-stage-frame">
+        <div class="loading-note" id="play-loading-note" aria-live="polite">Loading Castle Keeper WebGL...</div>
+        <div class="error-note is-hidden" id="play-error-note" aria-live="polite">The game is taking longer than expected to appear. Refresh the page or confirm the <code>castle-keeper-webgl</code> upload is complete.</div>
+        <iframe
+          id="webgl-frame"
+          class="webgl-frame"
+          src="../castle-keeper-webgl/index.html?v=original-playable-20260720-1"
+          title="Castle Keeper WebGL"
+          allow="autoplay; fullscreen; gamepad"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="troubleshooting-note" aria-labelledby="webgl-help-title">
+      <h2 id="webgl-help-title">WebGL troubleshooting</h2>
+      <p>If the WebGL version does not load on Namecheap, rebuild Unity WebGL with <strong>Decompression Fallback</strong> enabled or set <strong>Compression Format</strong> to <strong>Disabled</strong>, then upload the new build again. On the next rebuild, set company name to <strong>Josh Barnett</strong> (not DefaultCompany) and product label away from <strong>WebGL-Staging</strong>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span>Castle Keeper</span>
+      <span>Developer: Josh Barnett</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="../support.html">Support</a>
+      <a href="../privacy.html">Privacy</a>
+    </nav>
+  </footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
